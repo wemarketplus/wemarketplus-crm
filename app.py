@@ -5,6 +5,9 @@ from config import Config
 from extensions import db, migrate, jwt
 from routes.auth import auth_bp
 from routes.admin import admin_bp
+from routes.referrals import referrals_bp
+from routes.prospects import prospects_bp
+from routes.notes import notes_bp
 
 
 def create_app():
@@ -19,6 +22,9 @@ def create_app():
 
     app.register_blueprint(auth_bp)
     app.register_blueprint(admin_bp)
+    app.register_blueprint(referrals_bp)
+    app.register_blueprint(prospects_bp)
+    app.register_blueprint(notes_bp)
 
     @app.route("/")
     def home():
