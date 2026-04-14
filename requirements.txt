@@ -7,5 +7,5 @@ python-dotenv
 psycopg2-binary
 gunicorn
 stripe
-passlib[bcrypt]
+passlib
 email-validator
